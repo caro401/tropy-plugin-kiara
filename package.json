@@ -9,7 +9,7 @@
     "test": "electron-mocha --renderer test",
     "lint": "eslint --color src test",
     "build": "rollup -c rollup.config.js",
-    "watch": "rollup -c -w rollup.config.js"
+    "watch": "rollup -c -w rollup.config.js --watch"
   },
   "repository": {
     "type": "git",
@@ -26,19 +26,19 @@
   "homepage": "https://github.com/tropy/tropy-plugin-example#readme",
   "hooks": {
     "export": true,
-    "import": true
+    "import": false
   },
   "options": [
     {
-      "field": "clipboard",
-      "label": "Example: Copy exported data to clipboard?",
+      "field": "images",
+      "label": "Include images in exported database?",
       "type": "boolean",
       "default": false
     },
     {
       "field": "file",
       "type": "save-file",
-      "label": "Example: Save export as"
+      "label": "Save export as"
     }
   ],
   "devDependencies": {
